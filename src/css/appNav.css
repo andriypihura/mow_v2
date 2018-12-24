@@ -1,0 +1,42 @@
+.app-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-nav--item {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  justify-content: center;
+  height: 200px;
+  width: 250px;
+}
+
+.app-nav--item + .app-nav--item {
+  margin-left: 20px;
+}
+
+.app-nav--item span {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  transition: all .2s ease-in;
+  height: 20px;
+  display: block;
+  opacity: 1;
+}
+
+.app-nav--item:hover span {
+  height: 0;
+  opacity: 0;
+  margin-top: 0;
+}
+
+.app-nav--item svg {
+  font-size: 1.5rem;
+  transition: all .2s ease-in;
+}
+
+.app-nav--item:hover svg {
+  font-size: 3rem;
+}

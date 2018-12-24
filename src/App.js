@@ -1,33 +1,31 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import logo from './logo.svg';
-import './App.css';
+import './css/app.css';
+import './css/helpers.css';
 import { changePageAction } from './actions/changePageAction';
+import AppNav from './components/appNav';
 
 class App extends Component {
-  changePage = (path) => {
-    this.props.changePageAction(path);
-  }
-
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <button onClick={() => this.changePage('some-url1')}>Test redux action1</button>
-          <button onClick={() => this.changePage('some-url2')}>Test redux action2</button>
-          <button onClick={() => this.changePage('some-url3')}>Test redux action3</button>
-          <button onClick={() => this.changePage('some-url4')}>Test redux action4</button>
+      <div className="app">
+        <div className="app--header">
+          <div className="app--header-text -main">
+            Привіт, Андрій!
+          </div>
+          <div className="app--header-text -secondary">
+            Якийсь трішки довший текс-запитання?
+          </div>
+        </div>
+        <div className="app--body">
+          <AppNav />
           <pre>
             {
               JSON.stringify(this.props)
             }
           </pre>
-        </header>
+        </div>
       </div>
     );
   }

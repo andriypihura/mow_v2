@@ -1,0 +1,47 @@
+/* block */
+.block-corners {
+  background:
+    linear-gradient(to right, white 0%, white 20%, rgba(255, 255, 255, 0) 20%,
+                              rgba(255, 255, 255, 0) 80%, white 80%) no-repeat top left,
+    linear-gradient(to right, white 0%, white 20%, rgba(255, 255, 255, 0) 20%,
+                              rgba(255, 255, 255, 0) 80%, white 80%) no-repeat bottom right,
+    linear-gradient(to bottom, white 0%, white 20%, rgba(255, 255, 255, 0) 20%,
+                              rgba(255, 255, 255, 0) 80%, white 80%) no-repeat top left,
+    linear-gradient(to bottom, white 0%, white 20%, rgba(255, 255, 255, 0) 20%,
+                              rgba(255, 255, 255, 0) 80%, white 80%) no-repeat bottom right;
+  background-size: 100% 3px, 100% 3px, 3px 100%, 3px 100%;
+  padding: 15px;
+  transition: all .2s ease-in;
+}
+
+.block-corners:hover {
+  /* background-position: center; */
+  background-position: top 20% left, bottom 20% right, top left calc(20% - 2px), bottom right calc(20% - 2px);
+}
+
+/* animations */
+
+.text-typing-effect {
+  font-size: 3rem;
+  overflow: hidden;
+  border-right: .1em solid orange;
+  white-space: nowrap;
+  animation:
+    typing 3.5s steps(30, end),
+    blink-caret 1s step-end infinite;
+}
+
+.app--link {
+  color: #61dafb;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: auto }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
