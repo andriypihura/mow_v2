@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
-import './css/app.css';
-import './css/helpers.css';
-import { changePageAction } from './actions/changePageAction';
-import AppNav from './components/appNav';
+import './css/App.scss';
+import NavBarContainer from './containers/NavBarContainer/NavBarContainer';
 
 class App extends Component {
   render() {
@@ -19,7 +16,7 @@ class App extends Component {
           </div>
         </div>
         <div className="app--body">
-          <AppNav />
+          <NavBarContainer />
           <pre>
             {
               JSON.stringify(this.props)
@@ -31,12 +28,4 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  ...state
-})
-
-const mapDispatchToProps = dispatch => ({
-  changePageAction: (path) => dispatch(changePageAction(path))
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;

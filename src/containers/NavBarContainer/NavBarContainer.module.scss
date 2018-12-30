@@ -1,0 +1,47 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainItem {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: center;
+  width: 250px;
+
+  & + & {
+    margin-left: 20px;
+
+  }
+
+  span {
+    display: block;
+    font-size: 1.5rem;
+    height: 20px;
+    margin-top: 10px;
+    opacity: 1;
+    transition: all .2s ease-in;
+  }
+
+  svg {
+    font-size: 1.5rem;
+    transition: all .2s ease-in;
+  }
+
+  &:hover {
+
+    span {
+      height: 0;
+      margin-top: 0;
+      opacity: 0;
+    }
+
+    svg {
+      font-size: 3rem;
+    }
+  }
+}
+
